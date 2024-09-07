@@ -1,4 +1,4 @@
-package StrategyDP.withoutStrategyDP;
+package strategyDP.withoutStrategyDP;
 
 public class Vehicle {
     public void drive() {

@@ -1,4 +1,4 @@
-package StrategyDP.withStrategyDP.Strategy;
+package strategyDP.withStrategyDP.Strategy;
 
 public class NormalDriving implements DriveStrategy {
     @Override

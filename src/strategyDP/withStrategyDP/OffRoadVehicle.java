@@ -1,6 +1,6 @@
-package StrategyDP.withStrategyDP;
+package strategyDP.withStrategyDP;
 
-import StrategyDP.withStrategyDP.Strategy.SpecialDrive;
+import strategyDP.withStrategyDP.Strategy.SpecialDrive;
 
 public class OffRoadVehicle extends Vehicle{
     public OffRoadVehicle() {

@@ -1,6 +1,6 @@
-package StrategyDP.withStrategyDP;
+package strategyDP.withStrategyDP;
 
-import StrategyDP.withStrategyDP.Strategy.DriveStrategy;
+import strategyDP.withStrategyDP.Strategy.DriveStrategy;
 
 public class Vehicle {
     DriveStrategy driveStrategy;

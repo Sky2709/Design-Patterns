@@ -1,6 +1,6 @@
-package StrategyDP.withStrategyDP.Strategy;
+package strategyDP.withoutStrategyDP;
 
-public class SpecialDrive implements DriveStrategy {
+public class OffRoadVehicle extends Vehicle{
     @Override
     public void drive() {
         System.out.println("Special Driving Mode");

@@ -1,4 +1,4 @@
-package snakeAndLadder;
+package lowLevelDesigns.snakeAndLadder;
 
 public class Cell {
     Jump jump;

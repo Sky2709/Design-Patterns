@@ -1,4 +1,4 @@
-package snakeAndLadder;
+package lowLevelDesigns.snakeAndLadder;
 
 public class Player {
     String id;

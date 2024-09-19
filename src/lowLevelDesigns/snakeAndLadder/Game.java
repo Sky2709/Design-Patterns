@@ -39,7 +39,7 @@ public class Game {
             playerNewPosition = jumpCheck(playerNewPosition);
             playerTurn.currentPosition = playerNewPosition;
 
-            System.out.println("Player turn is: " + playerTurn.id +
+            System.out.println("Person turn is: " + playerTurn.id +
                     "new Position is: " + playerNewPosition);
             if (playerNewPosition == board.cells.length * board.cells.length) {
                 winner = playerTurn;

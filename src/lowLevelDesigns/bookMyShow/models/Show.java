@@ -1,4 +1,4 @@
-package lowLevelDesigns.bookMyShow;
+package lowLevelDesigns.bookMyShow.models;
 
 import java.util.List;
 

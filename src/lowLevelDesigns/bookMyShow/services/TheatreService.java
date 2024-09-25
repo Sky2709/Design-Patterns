@@ -1,20 +1,25 @@
-package lowLevelDesigns.bookMyShow;
+package lowLevelDesigns.bookMyShow.services;
+
+import lowLevelDesigns.bookMyShow.models.City;
+import lowLevelDesigns.bookMyShow.models.Movie;
+import lowLevelDesigns.bookMyShow.models.Show;
+import lowLevelDesigns.bookMyShow.models.Theatre;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TheatreController {
+public class TheatreService {
     Map<City, List<Theatre>> cityTheatreMap;
     List<Theatre> allTheatres;
 
-    public TheatreController() {
+    public TheatreService() {
         cityTheatreMap = new HashMap<>();
         allTheatres = new ArrayList<>();
     }
 
-    void addTheatre(Theatre theatre, City city) {
+    public void addTheatre(Theatre theatre, City city) {
         allTheatres.add(theatre);
         List<Theatre> theatres = cityTheatreMap.getOrDefault(city, new ArrayList<>());
         theatres.add(theatre);
@@ -24,7 +29,7 @@ public class TheatreController {
         cityTheatreMap.put(city, theatres);
     }
 
-    Map<City, List<Theatre>> getCityTheatreMap() {
+    public Map<City, List<Theatre>> getCityTheatreMap() {
         for (Map.Entry<City, List<Theatre>> entry : cityTheatreMap.entrySet()) {
             City city = entry.getKey();
             List<Theatre> theatres = entry.getValue();
@@ -41,7 +46,7 @@ public class TheatreController {
         return cityTheatreMap;
     }
 
-    Map<Theatre, List<Show>> getAllShows(City city, Movie movie) {
+    public Map<Theatre, List<Show>> getAllShows(City city, Movie movie) {
         // steps are
         // 1. get all theatres in the city
         // 2. get all shows in the theatre
@@ -70,17 +75,16 @@ public class TheatreController {
                 }
             }
         }
+        // print theatre show map
         for (Map.Entry<Theatre, List<Show>> entry : theatreShowMap.entrySet()) {
             Theatre theatre = entry.getKey();
             List<Show> shows = entry.getValue();
             System.out.println("Theatre Show map");
             System.out.println("Theatre: " + theatre.getTheatreId());
             for (Show show : shows) {
-                System.out.println("Show: " + show.getMovie().movieName);
+                System.out.println("Show: " + show.getMovie().getMovieName());
             }
         }
         return theatreShowMap;
     }
-
-
 }

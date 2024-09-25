@@ -1,5 +1,6 @@
 package lowLevelDesigns.splitWise.services;
 
+import lowLevelDesigns.splitWise.models.Expense;
 import lowLevelDesigns.splitWise.models.Group;
 import lowLevelDesigns.splitWise.models.User;
 
@@ -28,13 +29,16 @@ public class GroupService {
     }
 
     public Group getGroup(String groupId){
-
         for(Group group: groupList) {
-
             if(group.getGroupId().equals(groupId)){
                 return group;
             }
         }
         return null;
+    }
+
+    public List<Expense> getGroupExpenses(String groupId) {
+        Group group = getGroup(groupId);
+        return group.expenseList;
     }
 }

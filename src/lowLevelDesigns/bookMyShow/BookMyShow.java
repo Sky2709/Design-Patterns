@@ -1,5 +1,9 @@
 package lowLevelDesigns.bookMyShow;
 
+import lowLevelDesigns.bookMyShow.controllers.MovieController;
+import lowLevelDesigns.bookMyShow.controllers.TheatreController;
+import lowLevelDesigns.bookMyShow.models.*;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -164,10 +168,10 @@ public class BookMyShow {
         System.out.println("Looking for city theatre map");
         theatreController.getCityTheatreMap();
 
-        System.out.println("Movie: " + avengers.movieName + " in city: " + City.BANGALORE + " in theatre: " + inox.getTheatreId() + " in screen: " + inox.getScreens().get(0).getScreenId());
-        System.out.println("Movie: " + joker.movieName + " in city: " + City.BANGALORE + " in theatre: " + inox.getTheatreId() + " in screen: " + inox.getScreens().get(0).getScreenId());
-        System.out.println("Movie: " + avengers.movieName + " in city: " + City.DELHI + " in theatre: " + pvr.getTheatreId() + " in screen: " + pvr.getScreens().get(0).getScreenId());
-        System.out.println("Movie: " + joker.movieName + " in city: " + City.DELHI + " in theatre: " + pvr.getTheatreId() + " in screen: " + pvr.getScreens().get(0).getScreenId());
+        System.out.println("Movie: " + avengers.getMovieName() + " in city: " + City.BANGALORE + " in theatre: " + inox.getTheatreId() + " in screen: " + inox.getScreens().get(0).getScreenId());
+        System.out.println("Movie: " + joker.getMovieName() + " in city: " + City.BANGALORE + " in theatre: " + inox.getTheatreId() + " in screen: " + inox.getScreens().get(0).getScreenId());
+        System.out.println("Movie: " + avengers.getMovieName() + " in city: " + City.DELHI + " in theatre: " + pvr.getTheatreId() + " in screen: " + pvr.getScreens().get(0).getScreenId());
+        System.out.println("Movie: " + joker.getMovieName() + " in city: " + City.DELHI + " in theatre: " + pvr.getTheatreId() + " in screen: " + pvr.getScreens().get(0).getScreenId());
 
 
     }

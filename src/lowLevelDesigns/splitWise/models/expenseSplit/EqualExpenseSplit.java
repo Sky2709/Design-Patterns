@@ -12,7 +12,7 @@ public class EqualExpenseSplit implements ExpenseSplit{
         double amountShouldBePresent= totalAmount/ expenseShareUserList.size();
         for(ExpenseShareUser expenseShareUser : expenseShareUserList){
             if (expenseShareUser.getAmountOwe() != amountShouldBePresent){
-                throw new RuntimeException("Amount should be equal");
+                throw new RuntimeException("Amount should be equally divided");
             }
         }
     }

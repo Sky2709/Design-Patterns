@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Group {
-    String groupId;
-    String groupName;
-    List<User> groupMembers;
+    public String groupId;
+    public String groupName;
+    public List<User> groupMembers;
 
-    List<Expense> expenseList;
+    public List<Expense> expenseList;
 
     //ExpenseController is a class which will have the logic to create the expense
     ExpenseController expenseController;

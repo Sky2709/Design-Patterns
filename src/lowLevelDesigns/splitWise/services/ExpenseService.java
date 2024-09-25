@@ -32,7 +32,6 @@ public class ExpenseService {
         //validate the split request based on the split type if the split request is valid then create the expense else throw an exception
         Objects.requireNonNull(expenseSplit).validateSplitRequest(expenseShareUserDetails, expenseAmount);
 
-//        Expense expense = new Expense(expenseId, expenseAmount, description, paidByUser, splitType, splitDetails);
         //create an expense object using the builder pattern
         Expense expense = new Expense.ExpenseBuilder(expenseId, expenseAmount, paidByUser, splitType)
                 .setDescription(description)

@@ -1,4 +1,4 @@
-package lowLevelDesigns.bookMyShow;
+package lowLevelDesigns.bookMyShow.models;
 
 public enum City {
     BANGALORE,

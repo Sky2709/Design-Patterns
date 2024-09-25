@@ -1,6 +1,7 @@
 package lowLevelDesigns.splitWise.models;
 
 import lowLevelDesigns.splitWise.controllers.BalanceSheetController;
+import lowLevelDesigns.splitWise.controllers.ExpenseController;
 import lowLevelDesigns.splitWise.controllers.GroupController;
 import lowLevelDesigns.splitWise.controllers.UserController;
 import lowLevelDesigns.splitWise.models.expenseSplit.ExpenseSplitType;
@@ -18,11 +19,13 @@ public class SplitWise {
     UserController userController;
     GroupController groupController;
     BalanceSheetController balanceSheetController;
+    ExpenseController expenseController;
 
     public SplitWise(){
         userController = new UserController();
         groupController = new GroupController();
         balanceSheetController = new BalanceSheetController();
+        expenseController = new ExpenseController();
     }
 
     public void demo(){
@@ -42,15 +45,26 @@ public class SplitWise {
         expenseShareUsers.add(expenseShareUser1);
         expenseShareUsers.add(expenseShareUser2);
         expenseShareUsers.add(expenseShareUser3);
+        //add expense to expenseList of group
         group.createExpense("Exp1001", "Breakfast", 900, expenseShareUsers, ExpenseSplitType.EQUAL, userController.getUser("U1001"));
+//        groupController.addExpenseToGroup("G1001", group.expenseList.get(0));
 
         //create another expense inside a group with unequal splits between users U1001 and U2001
-        List<ExpenseShareUser> splits2 = new ArrayList<>();
-        ExpenseShareUser splits2_1 = new ExpenseShareUser(userController.getUser("U1001"), 400);
-        ExpenseShareUser splits2_2 = new ExpenseShareUser(userController.getUser("U2001"), 100);
-        splits2.add(splits2_1);
-        splits2.add(splits2_2);
-        group.createExpense("Exp1002", "Lunch", 500, splits2, ExpenseSplitType.UNEQUAL, userController.getUser("U2001"));
+//        List<ExpenseShareUser> splits2 = new ArrayList<>();
+//        ExpenseShareUser splits2_1 = new ExpenseShareUser(userController.getUser("U1001"), 400);
+//        ExpenseShareUser splits2_2 = new ExpenseShareUser(userController.getUser("U2001"), 100);
+//        splits2.add(splits2_1);
+//        splits2.add(splits2_2);
+//        group.createExpense("Exp1002", "Lunch", 500, splits2, ExpenseSplitType.UNEQUAL, userController.getUser("U2001"));
+
+        //create another expense without group with equal splits between users U1001 and U3001
+        List<ExpenseShareUser> expenseShareUsers2 = new ArrayList<>();
+        ExpenseShareUser expenseShareUser2_1 = new ExpenseShareUser(userController.getUser("U1001"), 250);
+        ExpenseShareUser expenseShareUser2_2 = new ExpenseShareUser(userController.getUser("U3001"), 250);
+        expenseShareUsers2.add(expenseShareUser2_1);
+        expenseShareUsers2.add(expenseShareUser2_2);
+        //this expense is not part of any group
+        expenseController.createExpense("Exp1002", "Lunch", 500, expenseShareUsers2, ExpenseSplitType.EQUAL, userController.getUser("U3001"));
 
         for(User user : userController.getAllUsers()) {
             balanceSheetController.showBalanceSheetOfUser(user);

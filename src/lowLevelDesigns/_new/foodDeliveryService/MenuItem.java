@@ -1,4 +1,4 @@
-package lowLevelDesigns.foodDeliveryService;
+package lowLevelDesigns._new.foodDeliveryService;
 
 public class MenuItem {
     private String menuItemId;

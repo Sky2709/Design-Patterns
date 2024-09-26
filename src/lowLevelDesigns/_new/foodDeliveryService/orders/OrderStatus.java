@@ -1,4 +1,4 @@
-package lowLevelDesigns.foodDeliveryService.orders;
+package lowLevelDesigns._new.foodDeliveryService.orders;
 
 public enum OrderStatus {
     PENDING,

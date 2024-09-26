@@ -1,6 +1,6 @@
-package lowLevelDesigns.foodDeliveryService.orders;
+package lowLevelDesigns._new.foodDeliveryService.orders;
 
-import lowLevelDesigns.foodDeliveryService.MenuItem;
+import lowLevelDesigns._new.foodDeliveryService.MenuItem;
 
 public class OrderItem {
     private MenuItem menuItem;

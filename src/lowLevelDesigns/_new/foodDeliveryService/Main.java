@@ -14,7 +14,7 @@ public class Main {
 
     public static void run(){
         System.out.println("Running Food Delivery Service");
-        FoodDeliveryService foodDeliveryService= new FoodDeliveryService();
+        FoodDeliveryService foodDeliveryService= FoodDeliveryService.getInstance();
 
         Customer customer1= new Customer("C001", "Ramesh Kumar", "ramesh@yahoo", "9876543210");
         Customer customer2= new Customer("C002", "Mahesh Kumar", "mahesh@google", "9876543211");

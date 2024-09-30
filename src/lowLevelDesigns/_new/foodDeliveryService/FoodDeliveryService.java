@@ -18,7 +18,7 @@ public class FoodDeliveryService {
     private Map<String, Order> orders; //orderId, Order
     private Map<String, DeliveryAgent> deliveryAgents; //deliveryAgentId, DeliveryAgent
 
-    public FoodDeliveryService() {
+    private FoodDeliveryService() {
         customers = new ConcurrentHashMap<>();
         restaurants = new ConcurrentHashMap<>();
         orders = new ConcurrentHashMap<>();

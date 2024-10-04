@@ -10,27 +10,27 @@ public class Main {
             fillUpInventory(vendingMachine);
             displayInventory(vendingMachine);
 
-            System.out.println("clicking on insert coin button");
-            State state = vendingMachine.getVendingMachineState();
-            state.clickOnInsertCoinButton(vendingMachine);
-
-            state = vendingMachine.getVendingMachineState();
-
-            System.out.println("Inserting coin");
-            state.insertCoin(vendingMachine, Coin.QUARTER);
-            state.insertCoin(vendingMachine, Coin.DIME);
-
-            System.out.println("clicking on start product selection button");
-            state.clickOnStartProductSelectionButton(vendingMachine);
-
-            state = vendingMachine.getVendingMachineState();
-            state.chooseProduct(vendingMachine, 0);
-
-            state = vendingMachine.getVendingMachineState();
-            state.dispenseProduct(vendingMachine, 0);
-
-            state = vendingMachine.getVendingMachineState();
-            displayInventory(vendingMachine);
+//            System.out.println("clicking on insert coin button");
+//            State state = vendingMachine.getVendingMachineState();
+//            state.clickOnInsertCoinButton(vendingMachine);
+//
+//            state = vendingMachine.getVendingMachineState();
+//
+//            System.out.println("Inserting coin");
+//            state.insertCoin(vendingMachine, Coin.QUARTER);
+//            state.insertCoin(vendingMachine, Coin.DIME);
+//
+//            System.out.println("clicking on start product selection button");
+//            state.clickOnStartProductSelectionButton(vendingMachine);
+//
+//            state = vendingMachine.getVendingMachineState();
+//            state.chooseProduct(vendingMachine, 0);
+//
+//            state = vendingMachine.getVendingMachineState();
+//            state.dispenseProduct(vendingMachine, 0);
+//
+//            state = vendingMachine.getVendingMachineState();
+//            displayInventory(vendingMachine);
         } catch (Exception e) {
             displayInventory(vendingMachine);
         }

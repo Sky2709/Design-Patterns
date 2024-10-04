@@ -1,6 +1,7 @@
-package lowLevelDesigns._new.onlineShoppingDesign.payments;
+package lowLevelDesigns._new.onlineShoppingDesign;
 
-import lowLevelDesigns._new.onlineShoppingDesign.*;
+import lowLevelDesigns._new.onlineShoppingDesign.payments.CreditCardPayment;
+import lowLevelDesigns._new.onlineShoppingDesign.payments.Payment;
 
 import java.util.List;
 
